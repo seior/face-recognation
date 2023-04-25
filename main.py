@@ -1,17 +1,18 @@
 from subprocess import call
 
-print("[1] initialize project")
+print("[ Initialize Project ] Intialize project")
 call(['python', 'init.py'])
 
-print("[2] take image sample")
+print("[ Take Sample ] Take image sample")
 call(['python', 'take_sample.py'])
 
-print("[3] train model")
-print("[3] waiting for train model...")
+print("[ Train Image ] Train models")
+print("[ Train Image ] Waiting for train model")
 call(['python', 'train_image.py'])
+print("[ Train IMage ] Finish train model")
 
-print("[4] start to recognize")
-print("[4] recognize")
+print("[ Face Recognation ] start to recognize")
+print("[ Face Recognation ] recognize")
 call(['python', 'face_recognation.py'])
 
-print("done")
+print("[ Face Recognation ] Finish recognize")

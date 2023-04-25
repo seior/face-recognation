@@ -72,6 +72,6 @@ while True:
         break
 
 # Do a bit of cleanup
-print("\n [INFO] Exiting Program and cleanup stuff")
+print("[ Face Recognation ] Exiting Program and cleanup stuff")
 cam.release()
 cv2.destroyAllWindows()

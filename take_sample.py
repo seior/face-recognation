@@ -17,9 +17,9 @@ cam.set(3, 640) # set video width
 cam.set(4, 480) # set video height
 
 # For each person, enter one numeric face id
-face_id = input('\n enter user id end press <return> ==>  ')
+face_id = input('[ Take Sample ] enter user id (must be int) end press <return> ==>  ')
 
-print("\n [INFO] Initializing face capture. Look the camera and wait ...")
+print("[ Take Sample ] Initializing face capture. Look the camera and wait ...")
 # Initialize individual sampling face count
 count = 0
 
@@ -29,7 +29,7 @@ while(True):
     faces = face_detector.detectMultiScale(gray, 1.3, 5)
 
     for (x, y, w, h) in faces:
-        print(f"take sample count : {count + 1}")
+        print(f"[ Take Sample ] take sample count : {count + 1}")
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         count += 1
 
@@ -46,6 +46,7 @@ while(True):
         break
 
 # Do a bit of cleanup
-print("\n [INFO] Exiting Program and cleanup stuff")
+print("[ Take Sample ] Exiting Program and cleanup stuff")
+
 cam.release()
 cv2.destroyAllWindows()
